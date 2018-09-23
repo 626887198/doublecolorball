@@ -1,0 +1,72 @@
+.title {
+	width: 100%;
+	height: 55px;
+	line-height: 55px;
+	color: ghostwhite;
+	font-weight: bold;
+	font-size: 18px;
+	text-align: center;
+	font-family: Microsoft Yahei;
+	background-color: #56577A;
+}
+
+.code {
+	width: 95px;
+	height: 24px;
+	color: rgba(16, 16, 16, 1);
+	font-size: 16px;
+	text-align: left;
+	font-family: SourceHanSansSC-bold;
+}
+
+.ball-item {
+	width: 30px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 14px;
+	text-align: center;
+	font-family: Roboto;
+	border: 1px solid rgba(187, 187, 187, 1);
+	border-radius: 100%;
+	float: left;
+	margin-right: 10px;
+}
+
+.ball-item-red {
+	color: red;
+}
+
+.ball-item-blue {
+	color: blue;
+}
+
+.nav-tabs {
+	text-align: center;
+	height: 24px;
+	line-height: 24px;
+}
+
+
+/*保存球的div*/
+
+.ball-div {
+	width: 12.5%;
+	float: left;
+	margin-top: 10px;
+}
+
+/*定义红球被选中的样式*/
+.ball-item-red-selected{
+	color: white;
+	background-color: red;
+	font-weight: bold;
+}
+
+
+
+/*定义蓝球被选中的样式*/
+.ball-item-blue-selected{
+	color: white;
+	background-color: dodgerblue;
+	font-weight: bold;
+}
