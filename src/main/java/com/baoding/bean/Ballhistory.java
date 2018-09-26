@@ -10,7 +10,7 @@ import java.util.List;
 @Entity
 @Data
 public class Ballhistory {
-    @Id
+   @Id
     private String code;
     private String name;
     private String date;
@@ -22,4 +22,6 @@ public class Ballhistory {
     private String content;
     @OneToMany(mappedBy = "code")
     List<Prizegrade> prizegrades;
+
+  
 }

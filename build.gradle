@@ -37,4 +37,7 @@ dependencies {
 	compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.17'
     //引入jpa相关的依赖 spring-boot-starter-data-jpa
     compile("org.springframework.boot:spring-boot-starter-data-jpa:1.5.10.RELEASE")
+
+	compile group: 'com.aliyun', name: 'aliyun-java-sdk-core', version: '3.5.1'
+	compile('com.aliyun:aliyun-java-sdk-dysmsapi:1.1.0')
 }
