@@ -13,6 +13,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--导入css样式-->
     <link rel="stylesheet" href="/css/bocai.css" />
+    
+    <script>
+        function buy(key) {
+
+            location.href="/cart/buyOne?key="+key;
+        }
+    </script>
 </head>
 
 <body>
@@ -28,8 +35,8 @@
             <img src="/img/icon.png" alt="" class="img-circle img-thumbnail" style="width:80px;height:80px" />
         </div>
         <div class="col-xs-8" style="padding-top: 22px;padding-left: 5px;">
-            <p style="font-size: 16px;" th:text="${session.user.username}">凯骏</p>
-            <p style="font-size: 14px;" th:text="|手机号:${session.user.phone}|">手机号:18688889999</p>
+            <p style="font-size: 16px;" th:text="${session.user.username}"></p>
+            <p style="font-size: 14px;" th:text="|手机号:${session.user.phone}|"></p>
         </div>
     </div>
 
@@ -53,7 +60,7 @@
         </div>
 
         <div class="col-xs-offset-7 col-xs-2">
-            <button class="btn btn-default">购买立中大奖</button>
+            <button class="btn btn-default"  th:onclick="|buy('${red}-${blue}')|">购买立中大奖</button>
         </div>
     </div>
 
@@ -111,7 +118,49 @@
 
     <div style="height: 60px; "></div>
 
-    <div th:replace="~{common/menu :: #menuid}"></div>
+    <div class="main_nav_bottom " id="menuid">
+        <nav class="navbar navbar-default navbar-fixed-bottom ">
+            <div class="container " align="center ">
+                <ul class="nav nav-tabs nav-tabs-justified ">
+                    <div class="row " align="center ">
+                        <div class="col-md-4 col-sm-4 col-xs-4 " align="center " style="padding-top: 8px; ">
+                            <li>
+										<span  onclick="location.href='/'">
+											<div class="row " style="font-size: 20px; ">
+												<span class="glyphicon glyphicon-home " aria-hidden="true "></span>
+								</div>
+								<div class="row ">首页</div>
+								</span>
+                            </li>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4 " align="center " style="padding-top: 8px; ">
+                            <li>
+									<span onclick="location.href='/cart/select'">
+											<div class="row " style="font-size: 20px; ">
+												<span class="glyphicon glyphicon-shopping-cart "
+                                                      aria-hidden="true "></span>
+							</div>
+							<div class="row ">选号</div>
+							</span>
+                            </li>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4 " align="center " style="padding-top: 8px; ">
+                            <li>
+							<span style="color: red;" >
+											<div class="row " style="font-size: 20px; ">
+												<span class="glyphicon glyphicon-user " aria-hidden="true "></span>
+					</div>
+					<div class="row ">我的</div>
+					</span>
+                            </li>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!--<div th:replace="~{common/menu :: #menuid}"></div>-->
 
 </div>
 </body>

@@ -92,4 +92,21 @@ public class CartController {
         session.setAttribute("cart",cart);
         return "redirect:/cart/";
     }
+    //我的主页 购买幸运号码
+    @GetMapping("/buyOne")
+    public String buyOne(String key,HttpSession session){
+        Cart cart = (Cart) session.getAttribute("cart");
+        if (cart==null){
+            cart=new Cart();
+        }
+            CartItem cartItem=new CartItem();
+            String[] ball = key.split("-");
+            cartItem.setRed(ball[0]);
+            cartItem.setBlue(ball[1]);
+            cart.add(cartItem);
+        
+        session.setAttribute("cart",cart);
+//        System.out.println(cart.count());
+        return "redirect:/cart/";
+    }
 }
