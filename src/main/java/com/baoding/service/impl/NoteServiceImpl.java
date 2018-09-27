@@ -26,4 +26,11 @@ public class NoteServiceImpl implements NoteService {
     public Note findByNid(String nid) {
         return dao.getOne(nid);
     }
+
+    @Override
+    public Note findTopByOrderByTimeDesc() {
+        return dao.findTopByOrderByTimeDesc();
+    }
+
+
 }

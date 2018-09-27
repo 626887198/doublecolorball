@@ -10,4 +10,6 @@ public interface NoteService {
     void save(Note note);
 
     Note findByNid(String nid);
+
+    Note findTopByOrderByTimeDesc();
 }

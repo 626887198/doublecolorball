@@ -15,7 +15,7 @@ public class BallUtils {
         }
         String str="";
         for (Integer i : set) {
-             str=str+","+i;
+             str=str+","+ String.format("%02d", i);
         }
         String s = str.substring(1);
         return s;
@@ -23,6 +23,6 @@ public class BallUtils {
 
     public static String randomBlueBall(){
         int i = new Random().nextInt(16) + 1;
-        return i+"";
+        return  String.format("%02d", i);
     }
 }

@@ -78,6 +78,14 @@
 				</a>
 			</div>
 
+			<!--论坛入口-->
+			<div class="row">
+				<div class="col-xs-12">
+					<h4 style="font-weight: bold">菠菜论坛</h4>
+					<div th:text="${note.title}">最新帖子的标题</div>
+				</div>
+			</div>
+
 			<!--彩票的条目-->
 			<div class="row" style="padding-top: 5px; padding-left: 10px; border-bottom:1px solid #8C8C8C;" th:each="ball : ${balls.getContent()}">
 				<div class="col-xs-10">
@@ -106,7 +114,7 @@
 			</div>
 
 
-			<!--分页-->
+			<!--分页栏-->
 			<nav aria-label="Page navigation" class="text-center">
 				<ul class="pagination">
 					<li>
