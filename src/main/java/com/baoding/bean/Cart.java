@@ -2,6 +2,7 @@ package com.baoding.bean;
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Cart {
@@ -13,7 +14,7 @@ public class Cart {
      *  清空的功能
      */
     //定义一个map保存所有的购物项  key为red-blue的字符串 value是购物项
-    private Map<String, CartItem> carts = new HashMap<>();
+    private Map<String, CartItem> carts = new LinkedHashMap<>();
 
     //增加的功能
     public void add(CartItem cartItem){
